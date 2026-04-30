@@ -15,6 +15,7 @@ Search the web and fetch complete page content from top results. This is the mos
 
 ### Input Schema
 ```
+---
 {
   "type": "object",
   "properties": {
