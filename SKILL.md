@@ -1,4 +1,3 @@
----
 # Web Search MCP Server - API Documentation
 ## Overview
 The Web Search MCP Server provides three tools for web searching and content extraction:
@@ -362,7 +361,3 @@ Enable debug logging by setting the environment variable:
 ```bash
 export DEBUG=web-search-mcp:*
 ```
-
-## Support
-
-For issues and questions, please log an issue on GitHub.
