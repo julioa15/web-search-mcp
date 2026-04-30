@@ -1,6 +1,21 @@
+# Web Search MCP Server - API Documentation
+
+## Overview
+
+The Web Search MCP Server provides three tools for web searching and content extraction:
+
+1. **`full-web-search`** - Comprehensive web search with full content extraction (primary tool)
+2. **`get-web-search-summaries`** - Lightweight search returning only result snippets  
+3. **`get-single-web-page-content`** - Extract content from a single web page URL
+
+## Tool: full-web-search
+
+### Description
+Search the web and fetch complete page content from top results. This is the most comprehensive web search tool. It searches the web and then follows the resulting links to extract their full page content, providing the most detailed and complete information available.
+
+### Input Schema
 ```
----
-}
+{
   "type": "object",
   "properties": {
     "query": {
@@ -310,4 +325,49 @@ The server implements rate limiting to respect Google's terms of service:
   }
 }
 ```
----
+
+## Best Practices
+
+### Query Optimization
+- Use specific, descriptive queries
+- Include relevant keywords
+- Avoid overly broad searches
+
+### Result Handling
+- Check for content extraction errors
+- Handle partial failures gracefully
+- Consider result relevance
+
+### Error Recovery
+- Implement retry logic for transient errors
+- Provide fallback content when extraction fails
+- Log errors for debugging
+
+## Troubleshooting
+
+### Common Issues
+
+1. **No Results Returned**
+   - Check query validity
+   - Verify network connectivity
+   - Check for rate limiting
+
+2. **Content Extraction Failures**
+   - Verify URL accessibility
+   - Check content encoding
+   - Review error messages
+
+3. **Performance Issues**
+   - Reduce concurrent requests
+   - Increase timeout values
+   - Check system resources
+
+### Debug Mode
+Enable debug logging by setting the environment variable:
+```bash
+export DEBUG=web-search-mcp:*
+```
+
+## Support
+
+For issues and questions, please log an issue on GitHub.
