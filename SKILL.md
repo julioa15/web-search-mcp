@@ -1,3 +1,4 @@
+---
 # Web Search MCP Server - API Documentation
 ## Overview
 The Web Search MCP Server provides three tools for web searching and content extraction:
