@@ -1,4 +1,3 @@
-{
   "type": "object",
   "properties": {
     "query": {
@@ -308,49 +307,3 @@ The server implements rate limiting to respect Google's terms of service:
   }
 }
 ```
-
-## Best Practices
-
-### Query Optimization
-- Use specific, descriptive queries
-- Include relevant keywords
-- Avoid overly broad searches
-
-### Result Handling
-- Check for content extraction errors
-- Handle partial failures gracefully
-- Consider result relevance
-
-### Error Recovery
-- Implement retry logic for transient errors
-- Provide fallback content when extraction fails
-- Log errors for debugging
-
-## Troubleshooting
-
-### Common Issues
-
-1. **No Results Returned**
-   - Check query validity
-   - Verify network connectivity
-   - Check for rate limiting
-
-2. **Content Extraction Failures**
-   - Verify URL accessibility
-   - Check content encoding
-   - Review error messages
-
-3. **Performance Issues**
-   - Reduce concurrent requests
-   - Increase timeout values
-   - Check system resources
-
-### Debug Mode
-Enable debug logging by setting the environment variable:
-```bash
-export DEBUG=web-search-mcp:*
-```
-
-## Support
-
-For issues and questions, please log an issue on GitHub.
