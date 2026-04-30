@@ -1,21 +1,14 @@
 # Web Search MCP Server - API Documentation
-
 ## Overview
-
 The Web Search MCP Server provides three tools for web searching and content extraction:
-
 1. **`full-web-search`** - Comprehensive web search with full content extraction (primary tool)
 2. **`get-web-search-summaries`** - Lightweight search returning only result snippets  
 3. **`get-single-web-page-content`** - Extract content from a single web page URL
-
 ## Tool: full-web-search
-
 ### Description
 Search the web and fetch complete page content from top results. This is the most comprehensive web search tool. It searches the web and then follows the resulting links to extract their full page content, providing the most detailed and complete information available.
-
 ### Input Schema
 ```
----
 {
   "type": "object",
   "properties": {
