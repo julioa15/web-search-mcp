@@ -1,39 +1,17 @@
 ---
- #Web Search MCP Server - API Documentation
-### Description
-Search the web and fetch complete page content from top results. This is the most comprehensive web search tool. It searches the web and then follows the resulting links to extract their full page content, providing the most detailed and complete information available.
+name: web-search
+description: Search the web and fetch complete page content from top results
+inputSchema:
+  type: object
+  properties:
+    query: {type: string, description: "Search query to execute (recommended for comprehensive research)"}
+    limit: {type: number, description: "Number of results to return with full content (1-10, default 5)", minimum: 1, maximum: 10, default: 5}
+    includeContent: {type: boolean, description: "Whether to fetch full page content (default: true)", default: true}
+    maxContentLength: {type: number, description: "Maximum characters per result content (0 = no limit). Usually not needed - content length is automatically optimized.", optional: true}
+  required: [query]
 ---
-### Input Schema
-```
-{
-  "type": "object",
-  "properties": {
-    "query": {
-      "type": "string",
-      "description": "Search query to execute (recommended for comprehensive research)"
-    },
-    "limit": {
-      "type": "number",
-      "description": "Number of results to return with full content (1-10, default 5)",
-      "minimum": 1,
-      "maximum": 10,
-      "default": 5
-    },
-    "includeContent": {
-      "type": "boolean",
-      "description": "Whether to fetch full page content (default: true)",
-      "default": true
-    },
-    "maxContentLength": {
-      "type": "number",
-      "description": "Maximum characters per result content (0 = no limit). Usually not needed - content length is automatically optimized.",
-      "optional": true
-    }
-  },
-  "required": ["query"]
 }
 ```
-
 ### Output Schema
 Returns formatted text content containing search results with full page content:
 
