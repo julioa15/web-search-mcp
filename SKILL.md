@@ -1,4 +1,3 @@
-### Input Schema
 ```json
 {
   "type": "object",
