@@ -1,4 +1,5 @@
----# Web Search MCP Server - API Documentation
+```
+# Web Search MCP Server - API Documentation
 ## Overview
 The Web Search MCP Server provides three tools for web searching and content extraction:
 1. **`full-web-search`** - Comprehensive web search with full content extraction (primary tool)
