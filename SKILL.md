@@ -1,5 +1,5 @@
 ---
-# Web Search MCP Server - API Documentation
+Web Search MCP Server - API Documentation
 ### Description
 Search the web and fetch complete page content from top results. This is the most comprehensive web search tool. It searches the web and then follows the resulting links to extract their full page content, providing the most detailed and complete information available.
 ---
